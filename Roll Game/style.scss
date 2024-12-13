@@ -1,5 +1,5 @@
-$main-font: 'Encode Sans Expanded', sans-serif;
-/* 100 - 900, italic*/
+$main-font: 'Encode Sans Expanded', sans-serif; /* 100 - 900, italic*/
+
 $primary-color: #0d3b66;
 $secondary-color: #00a896;
 $accent-color1: #ee964b;
@@ -18,7 +18,6 @@ $breakpoint-medium-mobile: 480px;
 $breakpoint-portrait-tablet: 768px;
 $breakpoint-landscape-tablet: 1024px;
 $breakpoint-desktop: 1200px;
-
 
 * {
     margin: 0;
@@ -64,6 +63,7 @@ body {
         background-color: #00000000;
 
         padding: $gap-margin-padding-sm;
+
         outline: 0;
 
         cursor: pointer;
@@ -76,21 +76,19 @@ body {
             height: 100%;
 
             background-color: $accent-color1;
+
             position: absolute;
             top: 6px;
             left: 6px;
             z-index: -1;
 
             transition: 0.2s;
-
         }
 
         &:hover:after {
             top: 0;
             left: 0;
         }
-
-
     }
 
     header {
@@ -112,8 +110,6 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-
-
 
         section {
             width: 95%;
@@ -145,7 +141,9 @@ body {
 
             .current {
                 width: 40%;
+
                 border-radius: $gap-margin-padding-sm;
+
                 background-color: $accent-color2;
 
                 display: flex;
@@ -168,7 +166,7 @@ body {
         .game-container {
             .img-container {
                 width: 50%;
- 
+
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -178,16 +176,209 @@ body {
             }
             .button-container {
                 width: 50%;
- 
+
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
- 
+
                 gap: $gap-margin-padding-sm;
             }
         }
+    }
 
+    @media (min-width: $breakpoint-medium-mobile) {
+        h1 {
+            font-size: 48px;
+        }
 
+        h2 {
+            font-size: 40px;
+        }
+
+        h3 {
+            font-size: 32px;
+        }
+
+        h4 {
+            font-size: 28px;
+        }
+
+        button {
+            padding: $gap-margin-padding-mm;
+
+            &:after {
+                top: 8px;
+                left: 8px;
+            }
+        }
+
+        header {
+            margin-bottom: $gap-margin-padding-mm;
+            gap: $gap-margin-padding-mm;
+        }
+
+        section {
+            margin-top: $gap-margin-padding-mm;
+        }
+
+        .player {
+            border-radius: $gap-margin-padding-mm;
+            padding: $gap-margin-padding-mm;
+            gap: $gap-margin-padding-mm;
+
+            .current {
+                border-radius: $gap-margin-padding-mm;
+                padding: $gap-margin-padding-mm;
+            }
+        }
+
+        .game-container {
+            .button-container {
+                gap: $gap-margin-padding-mm;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-portrait-tablet) {
+        h1 {
+            font-size: 60px;
+        }
+
+        h2 {
+            font-size: 50px;
+        }
+
+        h3 {
+            font-size: 40px;
+        }
+
+        h4 {
+            font-size: 34px;
+        }
+
+        button {
+            padding: $gap-margin-padding-pt-lt;
+
+            &:after {
+                top: 10px;
+                left: 10px;
+            }
+        }
+
+        header {
+            margin-bottom: $gap-margin-padding-pt-lt;
+            gap: $gap-margin-padding-pt-lt;
+        }
+
+        section {
+            margin-top: $gap-margin-padding-pt-lt;
+        }
+
+        .player {
+            border-radius: $gap-margin-padding-pt-lt;
+            padding: $gap-margin-padding-pt-lt;
+            gap: $gap-margin-padding-pt-lt;
+
+            .current {
+                border-radius: $gap-margin-padding-pt-lt;
+                padding: $gap-margin-padding-pt-lt;
+            }
+        }
+
+        .game-container {
+            .button-container {
+                gap: $gap-margin-padding-pt-lt;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-landscape-tablet) {
+        main {
+            width: 95%;
+
+            flex-direction: row;
+
+            section {
+                min-height: 340px;
+
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+            .game-container {
+                gap: $gap-margin-padding-desc;
+                width: 30%;
+            }
+
+            .player {
+                width: 35%;
+
+                .total {
+                    width: 100%;
+                }
+
+                .current {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        main {
+            max-width: $desc;
+            h1 {
+                font-size: 72px;
+            }
+
+            h2 {
+                font-size: 60px;
+            }
+
+            h3 {
+                font-size: 50px;
+            }
+
+            h4 {
+                font-size: 40px;
+            }
+
+            button {
+                padding: $gap-margin-padding-desc;
+
+                &:after {
+                    top: 12px;
+                    left: 12px;
+                }
+            }
+
+            header {
+                margin-bottom: $gap-margin-padding-desc;
+                gap: $gap-margin-padding-desc;
+            }
+
+            section {
+                margin-top: $gap-margin-padding-desc;
+            }
+
+            .player {
+                border-radius: $gap-margin-padding-desc;
+                padding: $gap-margin-padding-desc;
+                gap: $gap-margin-padding-desc;
+
+                .current {
+                    border-radius: $gap-margin-padding-desc;
+                    padding: $gap-margin-padding-desc;
+                }
+            }
+
+            .game-container {
+                gap: $gap-margin-padding-desc;
+                .button-container {
+                    gap: $gap-margin-padding-desc;
+                }
+            }
+        }
     }
 }
